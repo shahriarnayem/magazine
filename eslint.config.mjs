@@ -1,0 +1,35 @@
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+
+const eslintConfig = [
+  ...nextCoreWebVitals,
+  {
+    rules: {
+      "react-hooks/exhaustive-deps": "off",
+      "react-hooks/purity": "off",
+      "react/no-unescaped-entities": "off",
+      "react/display-name": "off",
+      "react/prop-types": "off",
+      "react-compiler/react-compiler": "off",
+      "@next/next/no-img-element": "off",
+      "@next/next/no-html-link-for-pages": "off",
+      "prefer-const": "off",
+      "no-unused-vars": "off",
+      "no-console": "off",
+      "no-debugger": "off",
+      "no-empty": "off",
+      "no-irregular-whitespace": "off",
+      "no-case-declarations": "off",
+      "no-fallthrough": "off",
+      "no-mixed-spaces-and-tabs": "off",
+      "no-redeclare": "off",
+      "no-undef": "off",
+      "no-unreachable": "off",
+      "no-useless-escape": "off"
+    }
+  },
+  {
+    ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"]
+  }
+];
+
+export default eslintConfig;

@@ -85,3 +85,22 @@ http://localhost:3000
 ## Notes
 
 Without `MONGODB_URI`, seed data is kept in memory while the dev server is running. Once you add a MongoDB URL, the same seed data will be inserted into MongoDB automatically when the database is empty.
+
+
+## Database mode
+
+By default the project uses built-in seed data, so it will run even if no MongoDB database is connected.
+
+```env
+DATABASE_MODE=seed
+MONGODB_URI=
+```
+
+When you are ready to use MongoDB, change only then:
+
+```env
+DATABASE_MODE=mongodb
+MONGODB_URI=your_mongodb_connection_url
+```
+
+If MongoDB cannot connect, the app will fall back to seed data instead of crashing.
